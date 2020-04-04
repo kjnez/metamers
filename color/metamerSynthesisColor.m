@@ -182,7 +182,7 @@ if isempty(seed)
   if opts.verbose; fprintf('(metamerOpts) setting rand seed from clock\n'); end
 elseif length(seed) == 2
   seedSz = seed;
-  randn('state',sum(100*clock));;
+  randn('state',sum(100*clock));
   if opts.verbose; fprintf('(metamerOpts) setting rand seed from clock\n'); end
 elseif length(seed) == 3
   seedSz = seed(1:2);

@@ -51,6 +51,7 @@ if ieNotDefined('Nsc'); Nsc = 4; end
 if ieNotDefined('Nor'); Nor = 4; end
 
 if ieNotDefined('outputPath'); outputPath = pwd; end
+if ieNotDefined('outputImage'); outputImage = 0; end
 if ieNotDefined('nIters'); nIters = 50; end
 
 if ieNotDefined('windowType'); windowType = 'radial'; end
@@ -99,7 +100,7 @@ case 'radial'
   if isempty(opts.windows.origin)
     opts.windows.origin = [(opts.szx+1)/2 (opts.szy+1)/2];
   end
-  opts.saveFile = sprintf('%gx%g_s%g_a%g_o%g',opts.szx,opts.szy,opts.windows.scale,opts.windows.aspect,opts.windows.overlap);
+  opts.saveFile = sprintf('face%g_%gx%g_s%g_a%g_o%g', outputImage,opts.szx,opts.szy,opts.windows.scale,opts.windows.aspect,opts.windows.overlap);
 case 'square'
   opts.windows.nSquares = nSquares;
   opts.saveFile = sprintf('%gx%g_s%gx%g_o%g',opts.szx,opts.szy,opts.windows.nSquares(1),opts.windows.nSquares(2),opts.windows.overlap);

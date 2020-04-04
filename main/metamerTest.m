@@ -32,7 +32,7 @@ res = metamerSynthesis(params,size(oim),m,opts);
 % used to generate metamers in Freeman & Simoncelli
 
 % load original image
-oim = double(imread('example-im-512x512.png'));
+oim = double(imread('experiment.png'));
 
 % set options
 opts = metamerOpts(oim,'windowType=radial','scale=0.5','aspect=2');
